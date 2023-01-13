@@ -1,0 +1,10 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-entrada-form',
+  templateUrl: './entrada-form.component.html',
+  styleUrls: ['./entrada-form.component.css']
+})
+export class EntradaFormComponent {
+
+}
