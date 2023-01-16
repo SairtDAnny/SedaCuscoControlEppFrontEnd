@@ -10,6 +10,8 @@ import { SalidaService } from 'src/app/services/salida.service';
 })
 export class ListDniColaboradorComponent implements OnInit {
 
+  regsalida : Salida[]=[];
+  
 
   salidasDni : ListarporDni[]=[];
   salidaDni : ListarporDni = new ListarporDni();
@@ -19,10 +21,8 @@ export class ListDniColaboradorComponent implements OnInit {
   ngOnInit(): void {
 }
 listDniColaborador(colaborador : String){
-  console.log("primero:"+colaborador+"-")
   this.salService.getDniSalida(colaborador)
-    .subscribe(response => this.salidasDni = response);
-    console.log(colaborador);
+    .subscribe(response => this.regsalida = response);
 }
 
 

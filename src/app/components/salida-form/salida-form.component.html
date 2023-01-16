@@ -1,7 +1,7 @@
 <div class="container">
     <form>
     
-      <legend class="mb-5">Registro de un Nuevo Ingreso</legend>
+      <legend class="mb-5">Registro de Entrega de Epp</legend>
 
       <div class="form-group row mb-3">
         <label for="patrimonio" class="col-form-label col-sm-2">Descripcion del EPP</label>
@@ -29,7 +29,15 @@
 
       <div class="mb-3">
         <label for="disabledTextInput" class="form-label">Fecha</label>
-        <input type="date" name="fecha" class="form-control" placeholder="Registre su DNI" [(ngModel)]="salida.fecha">
+        <input type="date" name="fecha" class="form-control" placeholder="Registre la fecha" [(ngModel)]="salida.fecha">
+      </div>
+      <div class="mb-3">
+        <label for="disabledTextInput" class="form-label">Fecha 1° Renovación</label>
+        <input type="date" name="fecha2" class="form-control" placeholder="Registre  la fecha" [(ngModel)]="salida.fechaSReno">
+      </div>
+      <div class="mb-3">
+        <label for="disabledTextInput" class="form-label">Fecha 2° Renovación</label>
+        <input type="date" name="fecha3" class="form-control" placeholder="Registre  la fecha" [(ngModel)]="salida.fechaTReno">
       </div>
       
 
@@ -53,4 +61,7 @@
     </div>
     </form>
 </div>
+<pre>
+  {{salida   | json}}
+</pre>
 

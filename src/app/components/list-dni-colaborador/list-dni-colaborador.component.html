@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
     <div>
         <h2 class="mb-4">Lista de Registro de Entrega de EPP por Trabajdor</h2>
         <i class="fa fa-search"></i>
@@ -8,7 +8,6 @@
         </tr>
     </div>
     <table class="table">
-        <!-- <table> -->
             <thead>
             <tr> 
     
@@ -16,8 +15,9 @@
                 <th scope="col">Cantidad</th>
                 <th scope="col">Unida/Medida</th>
                 <th scope="col">Fecha</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Fecha</th>
                 <th scope="col">Tipo de Entrega</th>
-                <!-- <th scope="col">Opciones/Acciones</th> -->
             <th><button class="btn btn-primary mb-3" >Imprimir Lista </button></th> 
             </tr>
             </thead>
@@ -28,19 +28,55 @@
                 <td>{{listarDni.cantidad}}</td>
                 <td>{{(listarDni.umPatrimonio)}}</td>
                 <td>{{listarDni.fecha}}</td>
+                <td>{{listarDni.fechaSReno}}</td>
+                <td>{{listarDni.fechaTReno}}</td>
                 <td>{{listarDni.tipo}}</td>
 
-                <!-- <td>{{salida.colaborador.nombreColaborador+" "+salida.colaborador.apellidoColaborador}}</td> -->
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+</div> -->
 
-                <!-- <td>
-                    <button class="btn btn-info me-3" [routerLink]="['formsSalida',salida.id]">Editar</button>
-                    <button class="btn btn-danger" (click)="deteleSalida(salida.id)" >Eliminar</button>
-                </td> -->
+<div class="container">
+    <div>
+        <h2 class="mb-4">Lista de Registro de Entrega de EPP por Trabajdor</h2>
+        <i class="fa fa-search"></i>
+        <tr>
+            <input type="text" class="form-control mb-2" placeholder="Search..." name="buscar" [(ngModel)]="salidaDni.dniColaborador">
+            <button class="btn btn-primary mb-5" (click)="listDniColaborador( salidaDni.dniColaborador)" >BUSCAR </button>
+        </tr>
+    </div>
+    <table class="table">
 
+            <thead>
+            <tr> 
+    
+                <th scope="col">Descripcion del EPP</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Unida/Medida</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Tipo de Entrega</th>
+                 <th scope="col">Opción</th> 
+             <th><button class="btn btn-primary mb-3" >Imprimir Lista </button></th> 
+            </tr>
+            </thead>
+    
+            <tbody>
+            <tr *ngFor="let salida of regsalida">
+                <td>{{salida.patrimonioSalida.desPatrimonio}}</td>
+                <td>{{salida.cantidad}}</td>
+                <td>{{(salida.patrimonioSalida.umPatrimonio)}}</td>
+                <td>{{salida.fecha}}</td>
+                <td>{{salida.fechaSReno}}</td>
+                <td>{{salida.fechaTReno}}</td>
+                <td>{{salida.tipo}}</td>
+                <button class="btn btn-outline-success" [routerLink]="['formsSalida',salida.id]">Renovar</button>
                 <td></td>
             </tr>
             
             </tbody>
         </table>
-    <!-- </table> -->
 </div>

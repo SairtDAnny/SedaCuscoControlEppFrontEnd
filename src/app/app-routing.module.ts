@@ -27,6 +27,9 @@ const routes: Routes = [
 {path: 'salida', component: SalidaComponent},
 {path:'salida/formsSalida', component: SalidaFormComponent},
 {path:'salida/formsSalida/:id', component: SalidaFormComponent},
+{path:'listColaboradorDni/formsSalida/:id', component: SalidaFormComponent},
+
+
 
 {path: 'listColaboradorDni', component: ListDniColaboradorComponent},
 

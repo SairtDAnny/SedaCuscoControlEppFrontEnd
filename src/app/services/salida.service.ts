@@ -22,9 +22,9 @@ export class SalidaService {
   }
   //LISTAR PENTREGAS POR DNI
 
-  getDniSalida(colaborador: String): Observable<ListarporDni[]>{
+  getDniSalida(colaborador: String): Observable<Salida[]>{
     console.log("entra al servi "+colaborador);
-    return this.http.get<ListarporDni[]>(this.url+'/dni/'+colaborador);
+    return this.http.get<Salida []>(this.url+'/dni/'+colaborador);
     console.log(colaborador);
   }
 
@@ -37,16 +37,16 @@ export class SalidaService {
     return this.http.get<Colaborador[]>(this.url+'/colaborador/list');
   }
 
-  insertSalida(entrada:Salida):Observable<Salida>{
-    return this.http.post<Salida>(this.url+'/insert',  entrada);
+  insertSalida(salida:Salida):Observable<Salida>{
+    return this.http.post<Salida>(this.url+'/insert',  salida);
   }
 
   listIdSalida(id:number): Observable<Salida>{
     return this.http.get<Salida>(this.url+'/'+id);
   }
 
-  updateSalida(entrada:Salida):Observable<Salida>{
-    return this.http.put<Salida>(this.url+'/update/'+entrada.id, entrada);
+  updateSalida(salida:Salida):Observable<Salida>{
+    return this.http.put<Salida>(this.url+'/update/'+salida.id, salida);
   }
 
   deleteSalida(id:number):Observable<any>{

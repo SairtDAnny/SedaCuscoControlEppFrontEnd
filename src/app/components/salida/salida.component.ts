@@ -1,4 +1,5 @@
 import { Component, OnInit} from '@angular/core';
+import { ListarporDni } from 'src/app/model/ListarporDni';
 import { Salida } from 'src/app/models/salida';
 import { SalidaService } from 'src/app/services/salida.service';
 
@@ -11,7 +12,9 @@ export class SalidaComponent implements OnInit {
 
   salidas: Salida[] = [];
 
-  constructor(private salService : SalidaService) { }
+  sal : ListarporDni[] =[];
+
+  constructor(private salService : SalidaService) { } 
 
   filterSalida = '';
 

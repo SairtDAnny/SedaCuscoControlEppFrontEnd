@@ -4,7 +4,7 @@
         <i class="fa fa-search"></i>
         <input type="text" class="form-control mb-5" placeholder="Search..." name="filtroSalida " [ngModel]="filterSalida">
     </div>
-    <button class="btn btn-primary mb-3" [routerLink]="['formsSalida']">Registrar Nuevo Entrega</button>
+    <!-- <button class="btn btn-primary mb-3" [routerLink]="['formsSalida']">Registrar Nuevo Entrega</button> -->
     <table class="table">
         <thead>
         <tr> 
@@ -12,7 +12,9 @@
             <th scope="col">Descripcion del EPP</th>
             <th scope="col">Cantidad</th>
             <th scope="col">Unida/Medida</th>
-            <th scope="col">Fecha</th>
+            <th scope="col">Fecha Entrega</th>
+            <th scope="col">Fecha Renovacion</th>
+            <th scope="col">Fecha Renovacion</th>
             <th scope="col">Tipo de Entrega</th>
             <th scope="col">Trabajador</th>
             <!-- <th scope="col">Opciones/Acciones</th> -->
@@ -26,12 +28,14 @@
             <td>{{salida.cantidad}}</td>
             <td>{{(salida.patrimonioSalida.umPatrimonio)}}</td>
             <td>{{salida.fecha}}</td>
+            <td>{{salida.fechaSReno}}</td>
+            <td>{{salida.fechaTReno}}</td>
             <td>{{salida.tipo}}</td>
             <td>{{salida.colaborador.nombreColaborador+" "+salida.colaborador.apellidoColaborador}}</td>
 
             <td>
-                <button class="btn btn-info me-3" [routerLink]="['formsSalida',salida.id]">Editar</button>
-                <button class="btn btn-danger" (click)="deteleSalida(salida.id)" >Eliminar</button>
+                <!-- <button class="btn btn-info me-3" [routerLink]="['formsSalida',salida.id]">Editar</button> -->
+                <!-- <button class="btn btn-danger" (click)="deteleSalida(salida.id)" >Eliminar</button> -->
             </td>
 
             <td></td>
