@@ -15,6 +15,8 @@ import { SalidaFormComponent } from './components/salida-form/salida-form.compon
 
 import {HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { FilterPipe } from './pipes/filter.pipe';
+import { ListDniColaboradorComponent } from './components/list-dni-colaborador/list-dni-colaborador.component';
 
 
 
@@ -30,7 +32,9 @@ import { FormsModule } from '@angular/forms';
     ColaboradorFormComponent,
     EntradaFormComponent,
     PatrimonioFormComponent,
-    SalidaFormComponent
+    SalidaFormComponent,
+    FilterPipe,
+    ListDniColaboradorComponent
   ],
   imports: [
     BrowserModule,

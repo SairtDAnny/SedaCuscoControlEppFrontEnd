@@ -19,6 +19,7 @@ export class PatrimonioFormComponent implements OnInit{
     this.activatedRoute.params
     .subscribe(params => {
       let id: number = params['id'];
+      console.log("es: "+id);
       if(id){
         this.patService.listPatrimonio(id)
         .subscribe(response => this.patrimonio = response);
@@ -36,6 +37,11 @@ insertPatrimonio( ){
     this.patService.updatePatrimonio(this.patrimonio)
     .subscribe(response => this.router.navigate(['patrimonio']));
   }
+  compararMedidaPat(o1: Patrimonio, o2:Patrimonio): boolean{
+    if(o1 === undefined && o2 === undefined) return true;
+    return o1 === null || o2 === null || o1 === undefined || o2 === undefined ? false: o1.id == o2.id;
+  }
+
 
 }
  

@@ -2,7 +2,6 @@ import { Component, OnInit} from '@angular/core';
 import { Colaborador } from 'src/app/models/colaborador';
 import { ColaboradorService } from 'src/app/services/colaborador.service';
 
-
 @Component({
   selector: 'app-colaborador',
   templateUrl: './colaborador.component.html',
@@ -20,7 +19,7 @@ export class ColaboradorComponent implements OnInit {
       .subscribe(response => this.colaboradores = response);
   }
 
-  eliminarProducto(id : number){
+  eliminarProducto(id : string){
     this.colService.eliminarColaborador(id)
     .subscribe(response =>{
       this.colaboradores = this.colaboradores.filter(cola=>cola.id !=id);

@@ -25,19 +25,15 @@ export class ColaboradorService {
     return this.http.post<Colaborador>(this.url+'/insert',  colaborador);
   }
 
-  obtenerColaborador(id:number): Observable<Colaborador>{
+  obtenerColaborador(id:string): Observable<Colaborador>{
     return this.http.get<Colaborador>(this.url+'/'+id);
-  }
-
-  obtenerColaboradorDni(dniColaborador:string): Observable<Colaborador>{
-    return this.http.get<Colaborador>(this.url+'/'+dniColaborador);
   }
 
   actualizarColaborador(colaborador:Colaborador):Observable<Colaborador>{
     return this.http.put<Colaborador>(this.url+'/update/'+colaborador.id, colaborador);
   }
 
-  eliminarColaborador(id:number):Observable<any>{
-    return this.http.delete<any>(this.url+'/delete/'+id);
+  eliminarColaborador(idDniColaborador:string):Observable<any>{
+    return this.http.delete<any>(this.url+'/delete/'+idDniColaborador);
   }
 }

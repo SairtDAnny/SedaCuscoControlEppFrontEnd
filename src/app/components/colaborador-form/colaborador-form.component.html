@@ -12,7 +12,7 @@
       </div>
       <div class="mb-3">
         <label for="disabledTextInput" class="form-label">DNI</label>
-        <input type="text" name="DNI" class="form-control" placeholder="Registre su DNI" [(ngModel)]="colaborador.dniColaborador">
+        <input type="text" name="DNI" class="form-control" placeholder="Registre su DNI" [(ngModel)]="colaborador.id">
       </div>
       <div class="mb-3">
         <label for="disabledTextInput" class="form-label">Cargo</label>
@@ -30,15 +30,12 @@
 
 
       <div class="mb-5">
-        <!-- <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
-          <label class="form-check-label" for="disabledFieldsetCheck">
-            Can't check this
-          </label>
-        </div> --> 
       </div>
-      <button type="submit" class="btn btn-primary" (click)="insertColaborador()" *ngIf="!colaborador.id">Registrar Trabajador</button>
-      <button type="submit" class="btn btn-primary" (click)="actualizarColaborador()" *ngIf="colaborador.id">Registrar Trabajador</button>
+      <button type="submit" class="btn btn-primary mb-5 me-3" (click)="insertColaborador()">Registrar Trabajador</button>
+      <button type="submit" class="btn btn-primary mb-5" (click)="actualizarColaborador()">Actualizar Trabajador</button>
+      <!-- <button type="submit" class="btn btn-primary" (click)="actualizarColaborador()" *ngIf="colaborador.idDniColaborador">Registrar Trabajador</button> -->
     </form>
 </div>
-
+<pre>
+  {{colaborador | json}}
+</pre>

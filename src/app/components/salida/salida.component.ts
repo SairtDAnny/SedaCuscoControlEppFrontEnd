@@ -1,10 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { Salida } from 'src/app/models/salida';
+import { SalidaService } from 'src/app/services/salida.service';
 
 @Component({
   selector: 'app-salida',
   templateUrl: './salida.component.html',
   styleUrls: ['./salida.component.css']
 })
-export class SalidaComponent {
+export class SalidaComponent implements OnInit {
 
+  salidas: Salida[] = [];
+
+  constructor(private salService : SalidaService) { }
+
+  filterSalida = '';
+
+  ngOnInit(): void {
+      this.salService.getSalida()
+      .subscribe(response => this.salidas = response);
+  }
+
+  deteleSalida(id : number){
+    this.salService.deleteSalida(id)
+    .subscribe(response =>{
+      this.salidas = this.salidas.filter(sali=>sali.id !=id);
+    })
+  }
 }

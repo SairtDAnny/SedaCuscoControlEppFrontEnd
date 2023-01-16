@@ -23,10 +23,11 @@ export class ColaboradorFormComponent implements OnInit{
   ngOnInit(): void {
       this.colService.getOficina()
       .subscribe(response => this.oficinas = response)
-
+     
       this.activatedRoute.params
       .subscribe(params => {
-        let id: number = params['id'];
+        let id: string = params['id'];
+        console.log("es: "+id);
         if(id){
           this.colService.obtenerColaborador(id)
           .subscribe(response => this.colaborador = response);
@@ -49,5 +50,4 @@ export class ColaboradorFormComponent implements OnInit{
     if(o1 === undefined && o2 === undefined) return true;
     return o1 === null || o2 === null || o1 === undefined || o2 === undefined ? false: o1.id == o2.id;
   }
-
 }

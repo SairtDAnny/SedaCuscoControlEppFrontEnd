@@ -16,19 +16,19 @@
 
 
           <li class="nav-item">
-            <a class="nav-link" href="#">INGRESOS DE EPP</a>
+            <a class="nav-link"[routerLink]="['entrada']">INGRESOS DE EPP</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">LISTA DE ENTREGAS DE EPP</a>
+            <a class="nav-link" [routerLink]="['salida']">LISTA DE ENTREGAS DE EPP</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               RENOVACIONES
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="#">ENTREGA DE EPP</a></li>
-              <li><a class="dropdown-item" href="#">RENOVAR EPP</a></li>
-              <li><a class="dropdown-item" href="#">REGISTRO DE ENTREGA</a></li>
+              <li><a  class="nav-link"  [routerLink]="['salida/formsSalida']">Entrega de EPP</a></li>
+              <li><a  class="nav-link" href="#">Renovar EPP</a></li>
+              <li><a  class="nav-link"  [routerLink]="['listColaboradorDni']" >Listar Registro de Entrega</a></li>
             </ul>
           </li>
         </ul>

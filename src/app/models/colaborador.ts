@@ -1,10 +1,9 @@
 import { Oficina } from "./oficina";
 
 export class Colaborador {
-    id : number;
+    id : string;
     nombreColaborador : string;
     apellidoColaborador : string;
-    dniColaborador : string;
     cargoColaborador : string;
     oficina : Oficina;
 }

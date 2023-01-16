@@ -4,6 +4,7 @@ import { ColaboradorFormComponent } from './components/colaborador-form/colabora
 import { ColaboradorComponent } from './components/colaborador/colaborador.component';
 import { EntradaFormComponent } from './components/entrada-form/entrada-form.component';
 import { EntradaComponent } from './components/entrada/entrada.component';
+import { ListDniColaboradorComponent } from './components/list-dni-colaborador/list-dni-colaborador.component';
 import { PatrimonioFormComponent } from './components/patrimonio-form/patrimonio-form.component';
 import { PatrimonioComponent } from './components/patrimonio/patrimonio.component';
 import { SalidaFormComponent } from './components/salida-form/salida-form.component';
@@ -20,12 +21,14 @@ const routes: Routes = [
 {path:'patrimonio/formsPatrimonio/:id', component: PatrimonioFormComponent},
 
 {path: 'entrada', component: EntradaComponent},
-{path:'formsEntrada', component: EntradaFormComponent},
-{path:'formsEntrada/:id', component: EntradaFormComponent},
+{path:'entrada/formsEntrada', component: EntradaFormComponent},
+{path:'entrada/formsEntrada/:id', component: EntradaFormComponent},
 
 {path: 'salida', component: SalidaComponent},
-{path:'formsSalida', component: SalidaFormComponent},
-{path:'formsSalida/:id', component: SalidaFormComponent}
+{path:'salida/formsSalida', component: SalidaFormComponent},
+{path:'salida/formsSalida/:id', component: SalidaFormComponent},
+
+{path: 'listColaboradorDni', component: ListDniColaboradorComponent},
 
 ];
 
