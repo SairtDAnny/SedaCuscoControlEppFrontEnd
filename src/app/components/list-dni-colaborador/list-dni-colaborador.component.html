@@ -73,7 +73,7 @@
                 <td>{{salida.fechaSReno}}</td>
                 <td>{{salida.fechaTReno}}</td>
                 <td>{{salida.tipo}}</td>
-                <button class="btn btn-outline-success" [routerLink]="['formsSalida',salida.id]">Renovar</button>
+                <button class="btn btn-outline-success" [routerLink]="['formsSalida',salida.id]" *ngIf="!salida.fechaTReno">Renovar</button>
                 <td></td>
             </tr>
             
